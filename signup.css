@@ -1,0 +1,135 @@
+body {
+  background-image: url("img/seatit.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: #222;
+  text-align: right;
+  direction: rtl;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: Arial, sans-serif;
+  direction: ltr; 
+}
+.navbar {
+  background: linear-gradient(135deg, #220bef, #6a11cb) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-brand {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.navbar-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffcc00;
+}
+.thank-you-message {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+}
+.login-frame {
+  margin: 120px auto 40px; 
+  width: 400px;
+  max-width: 90%; 
+  border-radius: 10px;
+}
+form {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+form h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+form label {
+  color: #ccc;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+form button {
+  background-color: #000000;
+  color: #f9f9f9;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+form .form-text {
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+footer {
+  background: #222;
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 22px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 480px) {
+   h3 {
+    font-size: 1.2rem;
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .login-frame {
+    margin: 100px auto 20px;
+    width: 90%;
+  }
+}
+

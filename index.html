@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baby Car Seat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Home</a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="galary.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="temp.html">Temp</a></li>
+            <li class="nav-item" id="signupLink"><a class="nav-link" href="signup.html">Sign Up</a></li>
+            <li class="nav-item" id="loginLink"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item" id="logoutLink" style="display:none;">
+              <a class="nav-link" href="javascript:void(0);" id="logoutButton">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <section class="hero d-flex flex-column justify-content-center align-items-center">
+    <p class="hero-subtitle fade-in" > מערכת למניעת שכיחת תינוק ברכב</p>
+
+    <div class="feature-box top-left fade-in">
+      <h3>בקרה חכמה</h3>
+      <p>למניעת שכיחת תינוק ברכב</p>
+    </div>
+    <div class="feature-box middle-left fade-in">
+      <h3>מערכת זיהוי מתקדמת</h3>
+      <p>לזיהוי התינוק על הכיסא</p>
+    </div>
+    <div class="feature-box bottom-left fade-in">
+      <h3>התראות חירום</h3>
+      <p>במקרה של זיהוי חום גבוה</p>
+    </div>
+
+    <div class="feature-box top-right fade-in">
+      <h3>שליחת התראות</h3>
+      <p>בזמן אמת לטלפון ההורה</p>
+    </div>
+    <div class="feature-box middle-right fade-in">
+      <h3>מערכת חיישנים</h3>
+      <p>מדויקת לזיהוי נוכחות</p>
+    </div>
+    <div class="feature-box bottom-right fade-in">
+      <h3>תמיכה טכנית 24/7</h3>
+      <p>זמינה עבור הורים בכל עת</p>
+    </div>
+
+    <section class="testimonials text-center">
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 mb-4">
+            <div class="card fade-in">
+              <div class="card-body bg-white bg-opacity-75 p-4 rounded-3 shadow-sm">
+                <h5 class="card-title mb-3">לקוחות ממליצים</h5>
+                <blockquote class="mb-3">"המוצר הזה שינה את השגרה שלנו ומעניק שקט נפשי!"</blockquote>
+                <blockquote class="mb-3">"הכיסא הזה מעניק תחושת ביטחון בכל נסיעה."</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="https://www.youtube.com/watch?v=pdMMt2tljOk" target="_blank">
+      <img src="https://th.bing.com/th/id/R.f0ad7d842cf80e3a4066a5de9a28a028?rik=%2bfKmb3qTNWDAVw&pid=ImgRaw&r=0" 
+           alt="Link Image" class="img-fluid link-image">
+    </a>
+  </section>
+
+
+  <footer class="bg-dark text-center text-white py-3 mt-5">
+    <div class="container">
+        <a href="https://www.facebook.com/babychairco/" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/BHamadicharef/status/1866021412546429097" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/watch?v=Kjpj8c-9OO4" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/babysnug_store/" class="text-white"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+  <script>
+    window.addEventListener("load", function() {
+      const linkImg = document.querySelector(".link-image");
+      if (linkImg) {
+        linkImg.classList.add("link-image-loaded");
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      function showOnScroll() {
+        fadeElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (elementTop < windowHeight - 100) {
+            element.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", showOnScroll);
+      showOnScroll();
+    });
+  </script>
+</body>
+</html>

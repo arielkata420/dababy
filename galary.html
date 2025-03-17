@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="galary.css">
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+  <script src="galary.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="galary.html">Gallery</a>  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="galary.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="temp.html">Temp</a></li>
+          <li class="nav-item" id="signupLink"><a class="nav-link" href="signup.html">Sign Up</a></li>
+          <li class="nav-item" id="loginLink"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item" id="logoutLink" style="display:none;">
+            <a class="nav-link" href="javascript:void(0);" id="logoutButton">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-4">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="arieli.jpeg" class="img-fluid rounded shadow" alt="Image 1">
+      </div>
+      <div class="col-md-4">
+        <img src="https://www.chiccousa.com/on/demandware.static/-/Sites-Chicco-Library/default/dw8c761443/images/baby-talk/keyfit-30.jpg" 
+             class="img-fluid rounded shadow" alt="Image 2">
+      </div>
+      <div class="col-md-4">
+        <img src="https://c2.staticflickr.com/8/7081/7174336898_45a7a0e2a8_b.jpg" class="img-fluid rounded shadow" alt="Image 3">
+      </div>
+      <div class="col-md-4">
+        <img src="https://p.turbosquid.com/ts-thumb/pX/Aj2tIZ/zu/screenshot20241021at9.43.14pm/png/1729539840/1920x1080/fit_q87/44cad779e4dadcc4ce596d601d0535eaa609296c/screenshot20241021at9.43.14pm.jpg" 
+             class="img-fluid rounded shadow" alt="Image 4">
+      </div>
+      <div class="col-md-4">
+        <img src="https://www.shutterstock.com/image-vector/set-children-sit-car-seat-260nw-2256913889.jpg" 
+             class="img-fluid rounded shadow" alt="Image 5">
+      </div>
+      <div class="col-md-4">
+        <img src="https://th.bing.com/th/id/R.0dbc837d21bc9053a2d672ed505c2a7d?rik=OfI5fnBExNG2Wg&pid=ImgRaw&r=0" 
+             class="img-fluid rounded shadow" alt="Image 6">
+      </div>
+      <div class="col-md-4">
+        <img src="https://pyxis.nymag.com/v1/imgs/481/b1c/adc000491033e9a84f8daa333a8258c9aa-britax-car-seat.rsquare.w1200.jpg" 
+             class="img-fluid rounded shadow" alt="Image 7">
+      </div>
+      <div class="col-md-4">
+        <img src="https://th.bing.com/th/id/R.0dbc837d21bc9053a2d672ed505c2a7d?rik=OfI5fnBExNG2Wg&pid=ImgRaw&r=0" 
+             class="img-fluid rounded shadow" alt="Image 8">
+      </div>
+      <div class="col-md-4">
+        <img src="https://laferianews.net/wp-content/uploads/2018/09/yop-infocard-eng.jpg" 
+             class="img-fluid rounded shadow" alt="Image 9">
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://www.facebook.com/babychairco/" class="text-light"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/BHamadicharef/status/1866021412546429097" class="text-light"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/watch?v=Kjpj8c-9OO4" class="text-light"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/babysnug_store/" class="text-light"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

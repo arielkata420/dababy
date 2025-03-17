@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+  <script src="contact.js"></script>
+</head>
+<body>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="contact.html">Contact</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="galary.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="temp.html">Temp</a></li>
+              <li class="nav-item" id="signupLink"><a class="nav-link" href="signup.html">Sign Up</a></li>
+              <li class="nav-item" id="loginLink"><a class="nav-link" href="login.html">Login</a></li>
+              <li class="nav-item" id="logoutLink" style="display:none;">
+                <a class="nav-link" href="javascript:void(0);" id="logoutButton">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br></br>
+    <main class="container my-5">
+      <header class="text-center mt-5">
+        <h1>צור קשר</h1>
+        </header>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <section class="contact-form fade-in">
+                    <form id="form" class="fade-in">
+                        <label for="shortMessage">תיאור בקצרה</label>
+                        <input type="text" id="shortMessage" name="shortMessage" placeholder=" הכנס תיאור בקצרה " required>
+
+                        <label for="longMessage">פירוט:</label>
+                        <textarea id="longMessage" name="longMessage" rows="4" placeholder=" הכנס פירוט " required></textarea>
+
+                        <fieldset>
+                            <legend>מה מטרת הפנייה?</legend>
+                            <label><input type="radio" name="purpose" value="שאלה" required> שאלה</label>
+                            <label><input type="radio" name="purpose" value="ביקורת"> ביקורת</label>
+                            <label><input type="radio" name="purpose" value="הצעה"> הצעה</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>אילו נושאים מעניינים אותך?</legend>
+                            <label><input type="checkbox" name="interests" value="פירוט מכני"> פירוט מכני</label>
+                            <label><input type="checkbox" name="interests" value="מוצרים חדשים"> מוצרים חדשים</label>
+                            <label><input type="checkbox" name="interests" value="עדכונים"> עדכונים</label>
+                        </fieldset>
+
+                        <button type="submit">שלח</button>
+                    </form>
+                    <p id="thankYouMessage" style="display: none;">תודה על פנייתך הורה מסור!</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-center text-white">
+        <div class="container">
+            <a href="https://www.facebook.com/babychairco/" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/BHamadicharef/status/1866021412546429097" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=Kjpj8c-9OO4" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/babysnug_store/" class="text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

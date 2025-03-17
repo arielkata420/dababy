@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  direction: ltr; 
+  background: url('img/seatit.png') no-repeat center center / cover;
+}
+.navbar {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(135deg, #220bef, #6a11cb) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;          
+  width: 100%;                   
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.navbar-nav {
+  display: flex;
+  width: 100%;             
+  justify-content: space-evenly; 
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffcc00;
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 22px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+ 
+.card {
+  background: linear-gradient(135deg, #406b91, #684bc4);
+  border-radius: 20px;
+  padding: 40px;
+  width: 25rem; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: auto;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.card img:hover {
+  transform: scale(1.05);
+}
+.card-body {
+  margin-top: 20px;
+  text-align: center;
+}
+button {
+  padding: 18px 40px;  
+  font-size: 18px;     
+  font-weight: bold;
+  border-radius: 16px; 
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+button:active {
+  transform: translateY(2px) scale(0.97);
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transform: rotate(45deg) translateX(-50%);
+  transition: all 0.4s ease;
+}
+button:hover::before {
+  height: 400%;
+  opacity: 1;
+}
+#turnOnButton,
+#turnOffButton {
+  position: fixed;
+  bottom: 60px;
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 50px;    
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 20px;
+}
+#turnOnButton {
+  right: 190px;
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+}
+#turnOnButton::before {
+  content: "\1F7E2"; 
+  margin-right: 12px;
+}
+
+#turnOffButton {
+  right: 20px;
+  background: linear-gradient(135deg, #f44336, #e57373);
+}
+#turnOffButton::before {
+  content: "\1F534"; 
+  margin-right: 12px;
+}
+
+@media (max-width: 768px) {
+  #turnOnButton,
+  #turnOffButton {
+    position: relative; 
+    width: 100%;
+    margin-top: 10px;  
+    bottom: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #turnOnButton,
+  #turnOffButton {
+    position: static;
+    width: 45%;
+    margin: 0;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  footer {
+    position: static;
+    width: 100%;
+    padding: 18px 0;
+    background-color: #333;
+    margin-top: 20px; 
+  }
+}
+@media (max-width: 480px) {
+  .navbar-brand {
+      font-size: 1rem;
+  }
+  .navbar-nav .nav-link {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+}
