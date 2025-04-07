@@ -107,6 +107,7 @@ function fetchTemperatureData() {
 
                 }
 
+
                 break;
             case 3: 
                 imageSrc = "babygood.jpg"; 
@@ -120,6 +121,7 @@ function fetchTemperatureData() {
                     description = "מערכות  דלוקות נעים  באוטו  "
 
                 }
+
                 break;
             case 4: 
                 imageSrc = "babylava.png"; 
@@ -133,13 +135,22 @@ function fetchTemperatureData() {
                     description = "מערכות  דלוקות חם באוטו  "
 
                 }
+
                 break;
-            case 5: 
+                case 5: 
                 imageSrc = "baaaby.jpg"; 
                 description = "אין תינוק באוטו"; 
                 showStream = false;
-                firebase.database().ref("RX/RX").set(1)  
-
+                firebase.database().ref("/RX/RX").set(2);  
+            
+               
+                break;
+            
+            case 6: 
+                 imageSrc = "200w (1).gif";
+                description = " מחכה ללחיצת  כפתור  "; 
+                showStream = false;
+ 
                 break;
             default: 
                 imageSrc = "arieli.jpeg"; 
@@ -230,7 +241,7 @@ turnOffButton.onclick = function () {
 };
 
 function sendDataToFPGA(value) {
-    const dataRef = firebase.database().ref("RX/RX");
+    const dataRef = firebase.database().ref("/RX/RX");
     dataRef.set(value)
         .then(() => console.log(`Data set to ${value}`))
         .catch((error) => console.error("Error writing to database:", error));
