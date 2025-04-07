@@ -147,7 +147,7 @@ function fetchTemperatureData() {
                 break;
             
             case 6: 
-                 imageSrc = "200w (1).gif";
+                 imageSrc = "giphy.gif";
                 description = " מחכה ללחיצת  כפתור  "; 
                 showStream = false;
  
